@@ -1,0 +1,746 @@
+:root {
+    --primary-color: #333;
+    --background-color: #fff;
+    --accent-color: #2196F3;
+    --text-color: #24292e;
+    --border-color: #e1e4e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* 导航栏样式 */
+.top-nav {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--accent-color);
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* 主容器样式 */
+.container {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 150px); /* 减去导航栏和页脚的高度 */
+}
+
+/* 个人资料部分 */
+.profile-section {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 260px;
+}
+
+#avatar {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.brief-info {
+    text-align: left;
+}
+
+.brief-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.brief-info p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.contact-links {
+    margin-top: 1rem;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.link-item .icon {
+    width: 20px;
+    text-align: center;
+}
+
+/* 主要信息部分 */
+.profile-info {
+    flex: 1;
+}
+
+.info-content {
+    font-size: 0.95rem;
+}
+
+.basic-info {
+    margin-bottom: 2rem;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.info-row .label {
+    width: 90px;
+    color: #333;
+}
+
+.info-row .value {
+    flex: 1;
+    color: #444;
+}
+
+.honors-section {
+    margin-bottom: 2rem;
+}
+
+.honors-section h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.honors-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.honors-section li {
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.achievements-section p {
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+/* 联系信息样式 */
+.contact-section {
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.contact-info {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.contact-info .icon {
+    font-size: 1.2rem;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* 出版物部分样式 */
+.publications-section {
+    margin-top: 2rem;
+}
+
+.publications-section h2 {
+    font-size: 1.5rem;
+    color: #24292e;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.publication-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+.paper-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.paper-title a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.paper-title a:hover {
+    color: #1976D2;
+    text-decoration: underline;
+}
+
+.publication-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.publication-abstract {
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.publication-authors {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.publication-links {
+    font-size: 0.9rem;
+}
+
+.download-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.download-link:hover {
+    color: #1976D2;
+    text-decoration: underline;
+}
+
+/* 荣誉与社会任职页面样式 */
+.honors-section {
+    margin-top: 1rem;
+}
+
+.section-title {
+    margin-top: 2.5rem;
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+.honors-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.honor-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.honor-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.honor-text {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.positions-list {
+    margin-top: 1.5rem;
+}
+
+.position-item {
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.position-icon {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.position-content {
+    flex-grow: 1;
+}
+
+.position-content p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.sub-positions {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.sub-positions li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.sub-positions li::before {
+    content: "•";
+    position: absolute;
+    left: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* 科研项目页面样式 */
+.projects-section {
+    margin-top: 2rem;
+}
+
+.project-item {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-title a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-title a:hover {
+    color: #1976D2;
+    text-decoration: underline;
+}
+
+.project-meta {
+    margin-bottom: 1.5rem;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.project-meta span {
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+.project-type {
+    color: #1976D2;
+    font-weight: 500;
+}
+
+.project-id {
+    color: #666;
+}
+
+.project-role {
+    color: #444;
+}
+
+.project-image {
+    margin: 1.5rem 0;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-description {
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* 教学与授课页面样式 */
+.teaching-section {
+    margin-top: 2rem;
+}
+
+.teaching-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.teaching-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.teaching-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.teaching-title a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.teaching-title a:hover {
+    color: #1976D2;
+    text-decoration: underline;
+}
+
+.teaching-meta {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.teaching-meta span {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.teaching-meta .course-type {
+    color: #1976D2;
+    font-weight: 500;
+}
+
+.teaching-meta .institution {
+    font-style: italic;
+}
+
+.teaching-meta .year {
+    color: #888;
+}
+
+.teaching-description {
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.teaching-description p {
+    margin: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .brief-info {
+        text-align: center;
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+
+    .info-row .label {
+        width: auto;
+        margin-bottom: 0.2rem;
+    }
+
+    .project-meta {
+        flex-direction: column;
+    }
+    
+    .project-meta span {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .teaching-meta span {
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+    
+    .teaching-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .honor-item, .position-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .position-content {
+        font-size: 0.95rem;
+    }
+
+    .sub-positions li {
+        padding-left: 1rem;
+    }
+}
+
+/* 主页特定样式 */
+.profile-section {
+    background-color: #f8f9fa;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.profile-section .profile-image {
+    width: 220px;
+}
+
+.profile-section h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.profile-section .contact-info {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.profile-section .contact-info .info-item {
+    margin-bottom: 1rem;
+}
+
+.profile-section .contact-info .info-item:last-child {
+    margin-bottom: 0;
+}
+
+.profile-section .contact-info .icon {
+    font-size: 1.2rem;
+    margin-right: 0.8rem;
+}
+
+.content-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #3498db;
+}
+
+.section-content {
+    color: #444;
+}
+
+.personal-info .info-item {
+    display: flex;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.personal-info .info-item:last-child {
+    margin-bottom: 0;
+}
+
+.personal-info .label {
+    width: 100px;
+    color: #666;
+    font-weight: 500;
+}
+
+.personal-info .value {
+    flex: 1;
+}
+
+.research-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.research-section li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.research-section li:before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.positions-section p,
+.notice-section p {
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 2rem 1rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+    }
+
+    .profile-section .profile-image {
+        width: 180px;
+        margin: 0 auto 2rem;
+    }
+
+    .personal-info .info-item {
+        flex-direction: column;
+    }
+
+    .personal-info .label {
+        width: auto;
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #fff;
+    color: #666;
+    padding: 1rem 0;
+    text-align: center;
+    flex-shrink: 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 1;
+}
