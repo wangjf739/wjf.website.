@@ -586,6 +586,15 @@ body {
     .teaching-title {
         font-size: 1.2rem;
     }
+
+     .team-list {
+        justify-content: flex-start;  /* Align items to the left on smaller screens */
+    }
+
+    .team-item {
+        font-size: 14px;              /* Adjust font size for mobile */
+        margin-right: 15px;           /* Adjust margin */
+    }
 }
 
 /* 响应式设计 */
